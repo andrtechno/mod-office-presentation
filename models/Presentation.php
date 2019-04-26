@@ -2,11 +2,12 @@
 
 namespace panix\mod\presentation\models;
 
+use panix\engine\CMS;
 use Yii;
 use panix\engine\Html;
 use panix\engine\db\ActiveRecord;
 use PhpOffice\PhpPresentation\IOFactory;
-use app\modules\presentation\components\PhpPptTree;
+use panix\mod\presentation\components\PhpPptTree;
 
 use PhpOffice\PhpPresentation\Slide;
 use PhpOffice\PhpPresentation\Shape\RichText;
@@ -86,10 +87,10 @@ class Presentation extends ActiveRecord
             $html .= '<b>Creator:</b> '.$this->file_creator.'<br/>';
         }
         if($this->file_created){
-            $html .= '<b>Create:</b> '.$this->file_created.'<br/>';
+            $html .= '<b>Create:</b> '.CMS::date($this->file_created).'<br/>';
         }
         if($this->file_modified){
-            $html .= '<b>Update:</b> '.$this->file_modified.'<br/>';
+            $html .= '<b>Update:</b> '.CMS::date($this->file_modified).'<br/>';
         }
 
 

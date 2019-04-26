@@ -89,14 +89,14 @@ Pjax::end();
 // if (!CLI) {
 //     include_once 'Sample_Footer.php';
 //  }
-?>
-<script>
 
+$this->registerJs('
     $(function () {
-        $('[data-toggle="popover"]').popover({
-              trigger:'hover',
+        $("[data-toggle=\"popover\"]").popover({
+              trigger:"hover",
             html:true
         })
     });
+');
+?>
 
-</script>

@@ -2,8 +2,8 @@
 
 namespace panix\mod\presentation\controllers;
 
-use app\modules\presentation\models\Presentation;
-use app\modules\presentation\models\search\PresentationSearch;
+use panix\mod\presentation\models\Presentation;
+use panix\mod\presentation\models\search\PresentationSearch;
 use panix\engine\controllers\WebController;
 use Yii;
 use yii\web\UploadedFile;
