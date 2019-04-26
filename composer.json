@@ -1,0 +1,29 @@
+{
+  "name": "panix/mod-office-presentation",
+  "description": "Module office presentation",
+  "keywords": [
+    "pixelion-cms",
+    "module",
+    "presentation",
+    "office"
+  ],
+  "homepage": "https://github.com/andrtechno/mod-office-presentation",
+  "type": "yii2-extension",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "PIXELION CMS",
+      "email": "dev@pixelion.com.ua",
+      "homepage": "https://pixelion.com.ua"
+    }
+  ],
+  "require": {
+    "phpoffice/phppresentation": "^0.9.0",
+    "phpoffice/phpword": "^0.13.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "panix\\mod\\presentation\\": ""
+    }
+  }
+}
