@@ -19,7 +19,7 @@
   ],
   "require": {
     "phpoffice/phppresentation": "^0.9.0",
-    "phpoffice/phpword": "^0.13.0"
+    "phpoffice/phpword": "^0.16.0"
   },
   "autoload": {
     "psr-4": {
