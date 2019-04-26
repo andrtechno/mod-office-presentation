@@ -29,7 +29,7 @@ echo GridView::widget([
             'attribute' => 'id',
             //'header' => 'name',
             'format' => 'raw',
-            'contentOptions' => array('class' => 'text-left'),
+            'contentOptions' => ['class' => 'text-center'],
             //'value' => '$data->gridName',
         ],
 
@@ -42,22 +42,23 @@ echo GridView::widget([
         ],
         'slides' => [
             'attribute' => 'slides',
-            // 'contentOptions' => array('class' => 'text-center'),
+            'contentOptions' => ['class' => 'text-center'],
         ],
         'name' => [
             'attribute' => 'name',
-            // 'contentOptions' => array('class' => 'text-center'),
+            'contentOptions' => ['class' => 'text-center'],
         ],
         'width' => [
             'attribute' => 'width',
-            // 'contentOptions' => array('class' => 'text-center'),
+            'contentOptions' => ['class' => 'text-center'],
         ],
         'height' => [
             'attribute' => 'height',
-            // 'contentOptions' => array('class' => 'text-center'),
+            'contentOptions' => ['class' => 'text-center'],
         ],
         'date_create' => [
             'attribute' => 'date_create',
+            'contentOptions' => ['class' => 'text-center'],
             //'value' => 'CMS::date($data->date_create)',
         ],
 
