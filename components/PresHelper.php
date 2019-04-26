@@ -90,9 +90,9 @@ class PresHelper {
         foreach ($writers as $writer => $extension) {
             $result .= date('H:i:s') . " Write to {$writer} format";
             if (!is_null($extension)) {
-//die(Yii::getAlias('@webroot/uploads'). "/output_{$filename}.{$extension}");
+//die(Yii::getAlias('@uploads'). "/output_{$filename}.{$extension}");
                 $xmlWriter = IOFactory::createWriter($phpPresentation, $writer);
-                $xmlWriter->save(Yii::getAlias('@webroot/uploads'). "/{$filename}-{$lang}.{$extension}");
+                $xmlWriter->save(Yii::getAlias('@uploads'). "/{$filename}-{$lang}.{$extension}");
                 // rename(__DIR__ . "/{$filename}.{$extension}", __DIR__ . "/results/{$filename}.{$extension}");
             } else {
                 $result .= ' ... NOT DONE!';

@@ -58,7 +58,7 @@ class Presentation extends ActiveRecord
 
         //  $pptReader = IOFactory::createReader('PowerPoint2007');
         //$pptReader = IOFactory::createReader('PowerPoint97');
-        $oPHPPresentation = $pptReader->load(Yii::getAlias('@webroot/uploads/presentation') . '/' . $this->filename);
+        $oPHPPresentation = $pptReader->load(Yii::getAlias('@uploads/presentation') . '/' . $this->filename);
 
         $oTree = new PhpPptTree($oPHPPresentation);
 

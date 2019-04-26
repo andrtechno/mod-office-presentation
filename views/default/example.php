@@ -37,10 +37,9 @@ define('EOL', CLI ? PHP_EOL : '<br />');
 define('IS_INDEX', SCRIPT_FILENAME == 'index');
 
 
+foreach ($array as $lang => $data) {
 
-foreach($array as $lang=>$data){
-
-    foreach ($data as $data2){
+    foreach ($data as $data2) {
 
 
         echo date('H:i:s') . ' Create new PHPPresentation object' . EOL;
@@ -61,12 +60,14 @@ foreach($array as $lang=>$data){
 // Create a shape (drawing)
         echo date('H:i:s') . ' Create a shape (drawing)' . EOL;
         $shape = $currentSlide->createDrawingShape();
-        $shape->setName('Pixelion logo')
-            ->setDescription('Pixelion logo')
-            ->setPath(Yii::getAlias('@webroot/uploads') . '/pres-logo.png')
-            ->setHeight(60)
-            ->setOffsetX(10)
-            ->setOffsetY(10);
+        $shape->setName('Pixelion logo');
+        $shape->setDescription('Pixelion logo');
+        if (file_exists(Yii::getAlias('@uploads') . '/pres-logo.png')) {
+            $shape->setPath(Yii::getAlias('@uploads') . '/pres-logo.png');
+        }
+        $shape->setHeight(60);
+        $shape->setOffsetX(10);
+        $shape->setOffsetY(10);
 //$shape->getShadow()->setVisible(true)
 //->setDirection(45)
 // ->setDistance(10);
@@ -101,13 +102,15 @@ foreach($array as $lang=>$data){
 // Create a shape (drawing)
         echo date('H:i:s') . ' Create a shape (drawing)2.1' . EOL;
         $shape = $currentSlide2->createDrawingShape();
-        $shape->setName('Pixelion logo')
-            ->setDescription('Pixelion logo')
+        $shape->setName('Pixelion logo');
+            $shape->setDescription('Pixelion logo');
             //->setPath(Yii::getAlias('@vendor/phpoffice/phppresentation/samples/resources').'/phppowerpoint_logo.gif')
-            ->setPath(Yii::getAlias('@webroot/uploads') . '/pres-logo.png')
-            ->setHeight(60)
-            ->setOffsetX(10)
-            ->setOffsetY(10);
+        if (file_exists(Yii::getAlias('@uploads') . '/pres-logo.png')) {
+            $shape->setPath(Yii::getAlias('@uploads') . '/pres-logo.png');
+        }
+            $shape->setHeight(60);
+            $shape->setOffsetX(10);
+            $shape->setOffsetY(10);
 //$shape->getShadow()->setVisible(true)
 //->setDirection(45)
 //->setDistance(10);
@@ -138,7 +141,7 @@ foreach($array as $lang=>$data){
 
 // Save file
 
-        echo $helper->write($objPHPPresentation, basename(__FILE__, '.php'), $writers,$lang);
+        echo $helper->write($objPHPPresentation, basename(__FILE__, '.php'), $writers, $lang);
     }
 }
 
