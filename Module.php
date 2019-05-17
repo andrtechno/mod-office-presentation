@@ -38,7 +38,7 @@ class Module extends WebModule implements BootstrapInterface
             'system' => [
                 'items' => [
                     [
-                        'label' => 'presentation',
+                        'label' => Yii::t('presentation/default','MODULE_NAME'),
                         'url' => ['/admin/presentation'],
                         'icon' => $this->icon,
                     ],
