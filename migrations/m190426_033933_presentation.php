@@ -1,4 +1,7 @@
 <?php
+
+namespace panix\mod\presentation\migrations;
+
 /**
  * Generation migrate by PIXELION CMS
  *
@@ -11,10 +14,11 @@
 use panix\engine\db\Migration;
 use panix\mod\presentation\models\Presentation;
 
-class m190426_033933_presentation extends Migration {
+class m190426_033933_presentation extends Migration
+{
 
-    // Use up()/down() to run migration code without a transaction.
-    public function up() {
+    public function up()
+    {
         $this->createTable(Presentation::tableName(), [
             'id' => $this->primaryKey()->unsigned(),
             'filename' => $this->string(50)->notNull(),
@@ -37,10 +41,9 @@ class m190426_033933_presentation extends Migration {
         ], $this->tableOptions);
     }
 
-    public function down() {
-        echo "m190426_033933_presentation cannot be reverted.\n";
+    public function down()
+    {
         $this->dropTable(Presentation::tableName());
-        return false;
     }
 
 }
