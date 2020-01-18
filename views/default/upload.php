@@ -53,7 +53,7 @@ use panix\engine\Html;
 
 
 
-            <?= Html::submitButton(Yii::t('app', 'Upload'), ['class' => 'btn btn-success']) ?>
+            <?= Html::submitButton(Yii::t('app/default', 'Upload'), ['class' => 'btn btn-success']) ?>
         </div>
         <?php ActiveForm::end() ?>
     </div>

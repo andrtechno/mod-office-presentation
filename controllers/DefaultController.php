@@ -58,7 +58,7 @@ class DefaultController extends WebController
                 }
 
                 if ($model->save(false)) {
-                    Yii::$app->session->setFlash('success', \Yii::t('app', 'FILE_SUCCESS_UPLOAD',['file'=>$fileName]));
+                    Yii::$app->session->setFlash('success', \Yii::t('app/default', 'FILE_SUCCESS_UPLOAD',['file'=>$fileName]));
                     return $this->redirect(['/presentation/upload']);
                 }
             } else {
